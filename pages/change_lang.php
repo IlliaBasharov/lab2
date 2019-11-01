@@ -5,6 +5,11 @@
 <?php
 $login = $_POST['login'];
 ?>
+<style>
+    input{
+        width: 50px;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
@@ -19,7 +24,7 @@ $login = $_POST['login'];
                     <div role="tabpanel" class="tab-pane fade in active" id="Section1">
                         <form class="form-horizontal" method="POST" action="validatelanguage.php">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Какой язык Вы хотите выбрать для пользователя <?php echo $login?>?</label>
+                                <label for="exampleInputEmail1">Какой язык Вы хотите выбрать для пользователя <input type="text" value="<?php echo $login?>" name="login" readonly>?</label>
                                 <select name="list1" required>
                                     <option>Русский</option>
                                     <option>Украинский</option>
